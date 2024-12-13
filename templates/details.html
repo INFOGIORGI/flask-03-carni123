@@ -1,0 +1,20 @@
+{%extends 'base.html'%}
+{%block nav%}
+<li><a href="https://www.wikipedia.org/">wikipedia</a></li>
+{%endblock%}
+{%block headerBlock%}
+<table>
+    <tr>
+        <td>nProdotto</td>
+        <td>scaffale</td>
+        <td>prezzo</td>
+    </tr>
+    {%for i in dati%}
+    <tr>
+        <td>{{i[0]}}</td>
+        <td><a href="{{url_for('select')}}">{{i[1]}}</a></td>
+        <td>{{i[2]}}</td>
+    </tr>
+    {%endfor%}
+</table>
+{%endblock%}
